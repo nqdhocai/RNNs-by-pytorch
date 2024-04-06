@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 
+# Recurrent Neural Network
 class RNN(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(RNN, self).__init__()
@@ -22,7 +23,7 @@ class RNN(nn.Module):
     def initHidden(self):
         return torch.zeros(1, self.hidden_size)
 
-
+# Gate Recurrent Unit Network
 class GRU(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(GRU, self).__init__()
@@ -73,6 +74,7 @@ class GRU(nn.Module):
     def initHidden(self):
         return torch.zeros(1, self.hidden_size)
 
+# Long Short Term Memory 
 class LSTM(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(LSTM, self).__init__()
